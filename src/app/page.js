@@ -6,20 +6,20 @@ import { apiLibs, getNested, nested, reproduce } from "@/libs/apiLibs";
 
 export default async function Home() {
   const topAnime = await apiLibs("top/anime", "limit=15");
-  let recommend = await getNested("recommendations/anime", "entry");
-  recommend = reproduce(recommend, 15);
+  // let recommend = await getNested("recommendations/anime", "entry");
+  // recommend = reproduce(recommend, 15);
 
-  let recomManga = await getNested("recommendations/manga", "entry");
-  recomManga = reproduce(recomManga, 15);
+  // let recomManga = await getNested("recommendations/manga", "entry");
+  // recomManga = reproduce(recomManga, 15);
 
-  let popPromos = await getNested("watch/promos/popular", "entry");
-  popPromos = nested(popPromos, 15);
+  // let popPromos = await getNested("watch/promos/popular", "entry");
+  // popPromos = nested(popPromos, 15);
 
-  let promos = await getNested("watch/promos", "entry");
-  promos = nested(promos, 15);
+  // let promos = await getNested("watch/promos", "entry");
+  // promos = nested(promos, 15);
 
-  let epi = await getNested("watch/episodes", "entry");
-  epi = nested(epi, 15);
+  // let epi = await getNested("watch/episodes", "entry");
+  // epi = nested(epi, 15);
 
   const seasonNow = await apiLibs("seasons/now", "limit=15");
 
@@ -36,7 +36,7 @@ export default async function Home() {
         <Slider api={seasonNow} />
       </section>
 
-      <section>
+      {/* <section>
         <Header title="Rekomendasi" linkTitle="" linkHref="" />
         <Slider api={recommend} />
       </section>
@@ -54,7 +54,7 @@ export default async function Home() {
       <section>
         <Header title="Anime with Episode" linkTitle="" linkHref="" />
         <Slider api={epi} />
-      </section>
+      </section> */}
     </>
   );
 }

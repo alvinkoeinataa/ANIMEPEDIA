@@ -7,7 +7,6 @@ export const apiLibs = async (resource, query) => {
 export const getNested = async (resource, object) => {
   const response = await apiLibs(resource);
   const nestedData = response.data.map((item) => item[object]);
-  // Menggunakan concat untuk menggabungkan array yang dihasilkan dari map
   const flattenedData = [].concat(...nestedData);
   return flattenedData;
 };
