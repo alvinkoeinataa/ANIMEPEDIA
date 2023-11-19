@@ -8,7 +8,7 @@ const Navbar = () => {
     <header className="bg-color-accent">
       <div className="flex md:flex-row flex-col gap-2 justify-between md:items-center p-4">
         <div>
-          <Link href={"/"} className="font-bold text-2xl p-2 mr-2 border border-color-dark">
+          <Link href={"/"} className="font-bold text-2xl p-2 mr-4 border border-color-dark">
             ANIMEPEDIA
           </Link>
 
