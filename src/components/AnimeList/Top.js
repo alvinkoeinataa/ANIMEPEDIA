@@ -12,9 +12,9 @@ import Link from "next/link";
 
 export default function Page({ api }) {
   return (
-    <section className="py-12">
+    <section className="mb-12">
       <div className="container">
-        <Swiper navigation pagination={{ type: "fraction" }} modules={[Navigation]} onSwiper={(swiper) => console.log(swiper)} className="h-96 w-full">
+        <Swiper navigation pagination={{ type: "fraction" }} modules={[Navigation]} className="h-96 w-full">
           {api.data?.map((anime, index) => (
             <SwiperSlide key={index}>
               <Link href={`/anime/${anime.mal_id}`} key={index} className="cursor-pointer text-color-primary">

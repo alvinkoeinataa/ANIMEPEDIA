@@ -18,7 +18,6 @@ export default function Slider({ api }) {
           navigation
           pagination={{ type: "fraction" }}
           modules={[Navigation]}
-          onSwiper={(swiper) => console.log(swiper)}
           className="h-96 w-full"
           slidesPerView={5}
           breakpoints={{
@@ -44,7 +43,7 @@ export default function Slider({ api }) {
           }}
         >
           {api.data?.map((anime, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide>
               <Link href={`/anime/${anime.mal_id}`} key={index} className="cursor-pointer">
                 <div className="flex h-full w-full items-center justify-center">
                   <Image src={anime.images.webp.image_url} width={600} height={350} alt="anime" className="block h-full w-full object-cover mr-2" />
