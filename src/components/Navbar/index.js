@@ -5,10 +5,10 @@ import Char from "../../app/char/page";
 
 const Navbar = () => {
   return (
-    <header className="bg-color-accent">
+    <header className="bg-color-accent mb-2">
       <div className="flex md:flex-row flex-col gap-2 justify-between md:items-center p-4">
         <div>
-          <Link href={"/"} className="font-bold text-2xl p-2 mr-4 border border-color-dark">
+          <Link href={"/"} className="font-bold text-color-primary text-2xl p-2 mr-4 border border-white">
             ANIMEPEDIA
           </Link>
 

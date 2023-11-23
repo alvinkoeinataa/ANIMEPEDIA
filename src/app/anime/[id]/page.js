@@ -8,7 +8,7 @@ const Detail = async ({ params: { id } }) => {
   // console.log(anime);
 
   return (
-    <div className="pt-4 px-4 mb-4">
+    <div className="pt-4 mb-4">
       <h1 className="ml-5 text-3xl text-color-primary">
         {anime.data?.title} - {anime.data?.year}
       </h1>
@@ -36,7 +36,7 @@ const Detail = async ({ params: { id } }) => {
       </div>
 
       <div className="grid md:grid-cols-2 gap-2 grid-cols-1 mt-6">
-        <Image src={anime.data.images.webp.image_url} alt={anime.data.images.jpg.image_url} width={350} height={350} className="w-full rounded object-cover max-h-96" />
+        <Image src={anime.data.images.webp.image_url} alt={anime.data.images.jpg.image_url} width={350} height={350} className="w-full rounded object-cover max-h-96 mb-6" />
         <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
       </div>
       <div className="flex flex-col p-4 gap-2 ">

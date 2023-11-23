@@ -11,7 +11,7 @@ const VideoPlayer = ({ youtubeId }) => {
 
   return (
     <div>
-      <YouTube videoId={youtubeId} onReady={(e) => e.target.pauseVideo()} opts={option} className="flex w-[100vw]" onError={() => alert("Video is broken, please try another")} />
+      <YouTube videoId={youtubeId} onReady={(e) => e.target.pauseVideo()} opts={option} className="flex w-[100vw] mb-6" onError={() => alert("Video is broken, please try another")} />
     </div>
   );
 };
