@@ -25,7 +25,7 @@ export default function Page({ api }) {
                   <div className="flex flex-row m-5">
                     {anime.genres.slice(0, 2).map((item) => (
                       <button key={index} className="mr-2 text-lg rounded-lg border text-white border-color-primary p-2 bg-color-accent">
-                        <h1 className="text-lg sm:text-2xl p-1 ">{item.name}</h1>
+                        <h1 className="text-sm sm:text-2xl">{item.name}</h1>
                       </button>
                     ))}
                   </div>
