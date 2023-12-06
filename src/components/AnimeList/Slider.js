@@ -45,7 +45,11 @@ export default function Slider({ api }) {
           <SwiperSlide key={index}>
             {anime.anime ? (
               <div className="flex flex-col h-full w-full items-center justify-center">
-                <Image src={anime.anime.images.jpg.image_url} width={600} height={350} alt="anime" className="block w-full object-cover mr-2" />
+                <Image src={anime.anime.images.jpg.image_url} width={600} height={350} alt="anime" className="block w-full object-cover " />
+
+                {/* <div className="absolute flex items-center justify-center bottom-0 w-full bg-color-accent h-16">
+                  <h1 className="text-color-primary">{anime.anime.title}</h1>
+                </div> */}
                 <h1 className="text-color-primary">{anime.anime.title}</h1>
               </div>
             ) : (
