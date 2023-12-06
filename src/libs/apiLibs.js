@@ -11,6 +11,12 @@ export const getNested = async (resource, object) => {
   return flattenedData;
 };
 
+// export const charAnime = async () => {
+//   const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/characters/${id}/anime`);
+//   const animeChar = await response.json();
+//   return animeChar;
+// };
+
 export const reproduce = (data, gap) => {
   const first = ~~(Math.random() * (data.length - gap) + 1);
   const last = first + gap;

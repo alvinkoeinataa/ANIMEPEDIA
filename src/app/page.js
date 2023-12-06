@@ -2,6 +2,7 @@
 import Header from "@/components/AnimeList/Header";
 import Slider from "@/components/AnimeList/Slider";
 import Top from "@/components/AnimeList/Top";
+
 import { apiLibs, getNested, nested, reproduce } from "@/libs/apiLibs";
 
 export default async function Home() {

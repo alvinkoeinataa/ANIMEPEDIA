@@ -42,12 +42,19 @@ export default function Slider({ api }) {
         }}
       >
         {api.data?.map((anime, index) => (
-          <SwiperSlide>
-            <Link href={`/anime/${anime.mal_id}`} key={index} className="cursor-pointer">
-              <div className="flex h-full w-full items-center justify-center">
-                <Image src={anime.images.webp.image_url} width={600} height={350} alt="anime" className="block w-full object-cover mr-2" />
+          <SwiperSlide key={index}>
+            {anime.anime ? (
+              <div className="flex flex-col h-full w-full items-center justify-center">
+                <Image src={anime.anime.images.jpg.image_url} width={600} height={350} alt="anime" className="block w-full object-cover mr-2" />
+                <h1 className="text-color-primary">{anime.anime.title}</h1>
               </div>
-            </Link>
+            ) : (
+              <Link href={`/anime/${anime.mal_id}`} className="cursor-pointer">
+                <div className="flex h-full w-full items-center justify-center">
+                  <Image src={anime.images.webp.image_url} width={600} height={350} alt="anime" className="block w-full object-cover mr-2" />
+                </div>
+              </Link>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

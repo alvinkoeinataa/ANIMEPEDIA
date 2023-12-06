@@ -11,6 +11,7 @@ export default async function Page({ params }) {
   return (
     <>
       <section>
+        <h1 className="text-color-primary text-2xl">Search Movies</h1>
         <Header title={`Pencarian untuk ${decodedKeyword}`} linkTitle="" linkHref="" />
         <AnimeList api={searchAnime} />
       </section>

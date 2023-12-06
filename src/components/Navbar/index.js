@@ -1,7 +1,8 @@
 import React from "react";
 import InputSearch from "./InputSearch";
 import Link from "next/link";
-import Char from "../../app/char/page";
+
+import UserActionButton from "./userButton";
 
 const Navbar = () => {
   return (
@@ -18,6 +19,7 @@ const Navbar = () => {
         </div>
 
         <InputSearch />
+        <UserActionButton />
       </div>
     </header>
   );
