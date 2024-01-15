@@ -6,7 +6,9 @@ export const apiLibs = async (resource, query) => {
 
 export const getNested = async (resource, object) => {
   const response = await apiLibs(resource);
-  const nestedData = response.data.map((item) => item[object]);
+
+  console.log(response);
+  const nestedData = (response?.data || []).map((item) => item[object]);
   const flattenedData = [].concat(...nestedData);
   return flattenedData;
 };

@@ -26,4 +26,5 @@ model Comment {
   comment           String
   username          String   
   anime_title       String     
+  user_image        String
 }

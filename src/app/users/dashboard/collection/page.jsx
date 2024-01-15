@@ -7,12 +7,11 @@ import prisma from "@/libs/prisma";
 const Page = async () => {
   const user = await authUserSession();
   const collection = await prisma.collection.findMany({ where: { user_email: user.email } });
-  console.log(collection);
 
   return (
     <section className="mt-4 px-4 w-full">
       <Header title={"My Collection"} />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {collection.map((collect, index) => (
           <Link key={index} href={`/anime/${collect.anime_mal_id}`} className="relative border-2 border-color-accent">
             <Image src={collect.anime_image} alt={collect.anime_image} width={350} height={350} className="w-full" />

@@ -29,7 +29,7 @@ export default function Top({ api }) {
                     ))}
                   </div>
 
-                  <h1 className="text-lg sm:text-3xl m-0 sm:m-4">{anime.score.toString().slice(0, 3)}</h1>
+                  {/* <h1 className="text-lg sm:text-3xl m-0 sm:m-4">{anime.score.toString().slice(0, 3)}</h1> */}
 
                   <h1 className="text-lg sm:text-3xl">{anime.episodes} episodes</h1>
                 </div>

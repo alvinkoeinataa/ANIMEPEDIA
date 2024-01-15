@@ -15,6 +15,8 @@ const Detail = async ({ params: { id } }) => {
     where: { user_email: user?.email, anime_mal_id: id },
   });
 
+  console.log(user);
+
   return (
     <div className="pt-4 mb-4">
       <h1 className="ml-5 text-3xl text-color-primary">
@@ -28,10 +30,10 @@ const Detail = async ({ params: { id } }) => {
           <p>{anime.data?.rank}</p>
         </div>
 
-        <div className="w-36 flex flex-col justify-center items-center rounded border border-color-primary p-2">
+        {/* <div className="w-36 flex flex-col justify-center items-center rounded border border-color-primary p-2">
           <h3>SKOR</h3>
           <p>{anime.data?.score}</p>
-        </div>
+        </div> */}
 
         <div className="w-36 flex flex-col justify-center items-center rounded border border-color-primary p-2">
           <h3>ANGGOTA</h3>
@@ -58,7 +60,7 @@ const Detail = async ({ params: { id } }) => {
       <div className="p-4">
         <h1 className="text-color-primary text-2xl font-bold underline mb-2">Reviews</h1>
         <CommentBox anime_mal_id={id} />
-        {user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data?.title} />}
+        {user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data?.title} user_image={user?.image} />}
       </div>
     </div>
   );

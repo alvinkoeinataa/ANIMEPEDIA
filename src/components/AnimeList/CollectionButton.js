@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const CollectionButton = ({ anime_mal_id, user_email, anime_image, anime_title }) => {
   const [isCreated, setIsCreated] = useState(false);
+  const router = useRouter();
 
   const handleCollection = async (e) => {
     e.preventDefault();
@@ -16,6 +18,7 @@ const CollectionButton = ({ anime_mal_id, user_email, anime_image, anime_title }
     const collection = await response.json();
     if (collection.status == 200) {
       setIsCreated(true);
+      router.refresh();
     }
   };
 
